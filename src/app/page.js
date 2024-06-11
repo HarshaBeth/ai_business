@@ -8,9 +8,13 @@ import { useState } from "react";
 
 export default function Home() {
   const [formData, setFormData] = useState([]);
+  const [nums, setNums] = useState([]);
 
   const formDataChange = (newData) => {
     setFormData(newData);
+  }
+  const numsUpdate = (numsData) => {
+    setNums(numsData);
   }
 
 
@@ -19,7 +23,7 @@ export default function Home() {
       <Homepage />
       <Form formData={formData} formDataChange={formDataChange} />
       <Chat formData={formData}/>
-      <Chart />
+      <Chart  nums={nums} numsUpdate={numsUpdate}/>
       <Contact />
     </>
   );
