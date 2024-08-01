@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import Mermaid from '../components/Mermaid';
 
 function Chart({nums, numsUpdate}) {
-  
+  const [temp, setTemp] = useState(0)
   const form = useForm();
   const { register, handleSubmit } = form;
 
@@ -11,15 +11,15 @@ function Chart({nums, numsUpdate}) {
   const onSubmitNums = (data) => {
     let numsCopy = [...nums];
     numsCopy = [data.inA, data.inB];
-
+    setTemp(data.inB)
     numsUpdate(numsCopy);
   }
 
   const chart = `
-    graph LR;
-      Component_A--->Component_B;
+  graph LR;
+  Component_A--->${temp};
   `;
-
+  
   return (
     <div className='h-fit py-20 w-full flex flex-col justify-center items-center bg-gray-100 gap-5'>
       <h1 className='text-4xl font-bold'>Make Your Chart Here!</h1>

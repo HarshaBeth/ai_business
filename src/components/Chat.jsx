@@ -12,7 +12,8 @@ function Chat({formData}) {
  
 
   const startMessage = () => {
-    setInput('Business Objective: \n' + 
+    setInput('Generate an azure cloud architecture diagram using reactflow and react-az-icons ex. AzVirtualMachine, and name the file App.js,\n' +
+              'Business Objective: \n' + 
               formData[0] +
               '\nBusiness Capacity: \n' +
               formData[1] +
@@ -21,8 +22,7 @@ function Chat({formData}) {
               '\nContinuity: \n' +
               formData[3] +
               '\nBusiness Guildelines: \n' +
-              formData[4] +
-              '\n\nThese are my business terms, give me your feedback please.' 
+              formData[4] 
             );
     
     setStarted(true);
@@ -43,7 +43,7 @@ function Chat({formData}) {
         {
           model: 'gpt-3.5-turbo',
           messages: itemsCopy,
-          max_tokens: 150,
+          max_tokens: 500,
           temperature: 0.7
         },
         {
