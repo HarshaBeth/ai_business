@@ -22,7 +22,7 @@ function Form({formData, formDataChange}) {
   return (
     <div className='h-screen w-full bg-gray-100 flex justify-center items-center' id='Form'>
         <form onSubmit={handleSubmit(onSubmit)} 
-            className='border-2 border-black w-fit h-fit py-12 px-16 rounded-lg font-mono flex flex-col gap-5 bg-white'>
+            className='border-2 border-black w-fit h-fit py-12 px-16 max-md:px-8 max-sm:px-3 max-sm:py-8 rounded-lg font-mono flex flex-col max-sm:justify-center max-sm:items-center gap-5 bg-white'>
             {submitted && 
                 <span className=' flex justify-center items-center text-4xl font-sans'> Form Submitted...</span>
             }
@@ -40,14 +40,14 @@ function Form({formData, formDataChange}) {
                     labelPlacement='inside'
                     maxRows={3}
                     placeholder='Type here...'
-                    className='bg-gray-100 border-b-2 border-green-500 font-serif rounded-md'
+                    className='bg-gray-100 border-b-2 border-green-500 font-serif rounded-md max-sm:px-2'
                     id='objective'
                     {...register("objective")}
                 />
             </span>
 
             {/* Q2 */}
-            <span className={`${submitted ? 'hidden':'block'}`}>
+            <span className={`${submitted ? 'hidden':'block'} max-sm:w-[95%]`}>
                 <p>What is the <span className=' text-green-600 font-bold'>Capacity</span> of your business?<span className='text-red-500 font-sans'>*</span></p>
                 <input 
                     type="text" 
@@ -59,7 +59,7 @@ function Form({formData, formDataChange}) {
             </span>
 
             {/* Q3 */}
-            <span className={`${submitted ? 'hidden':'block'}`}>
+            <span className={`${submitted ? 'hidden':'block'} max-sm:w-[95%]`}>
                 <p>What does your <span className=' text-green-600 font-bold'>Scalability</span> look like?<span className='text-red-500 font-sans'>*</span></p>
                 <input 
                     type="text" 
@@ -71,7 +71,7 @@ function Form({formData, formDataChange}) {
             </span>
 
             {/* Q4 */}
-            <span className={`${submitted ? 'hidden':'block'}`}>
+            <span className={`${submitted ? 'hidden':'block'} max-sm:w-[95%]`}>
                 <p>Explain your <span className=' text-green-600 font-bold'>Continuity</span>, regional/global focus?<span className='text-red-500 font-sans'>*</span></p>
                 <input type="text" required className='w-full border-b-2 border-green-500 bg-gray-100 rounded-md font-serif'
                 id='continuity'
@@ -80,7 +80,7 @@ function Form({formData, formDataChange}) {
             </span>
 
             {/* Q5 */}
-            <span className={`${submitted ? 'hidden':'block'}`}>
+            <span className={`${submitted ? 'hidden':'block'} max-sm:w-[95%]`}>
                 <p>What are the <span className=' text-green-600 font-bold'>Guidelines</span>?<span className='text-red-500 font-sans'>*</span></p>
                 <input type="text" required className='w-full border-b-2 border-green-500 bg-gray-100 rounded-md font-serif'
                 id='guidelines'
