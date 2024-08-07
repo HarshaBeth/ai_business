@@ -67,30 +67,30 @@ function Chat({formData}) {
   }
   
   return (
-    <div className='h-screen w-full flex flex-row justify-center items-center gap-4' id='Chat'>
+    <div className='h-screen w-full flex flex-row max-lg:flex-col justify-center items-center gap-3 max-xl:gap-0' id='Chat'>
       
-      <div className='text-6xl w-[420px] font-serif '>
+      <div className='text-6xl w-[420px] font-serif max-xl:text-3xl max-xl:w-[220px] max-lg:w-fit'>
         Get Your <span className='text-green-500'>Feedback</span> Here:
       </div>
 
-      <div className='h-[550px] w-[800px] border-4 rounded-xl border-gray-400 px-5 pt-4'>
+      <div className='h-[550px] w-[800px] max-lg:w-[80%] border-4 rounded-xl border-gray-400 px-5 pt-4'>
 
         {/* Chat history */}
         {formData[0] === undefined ? 
           (
-          <div className='h-[85%] w-full flex justify-center items-center text-6xl font-serif'>
+          <div className='h-[85%] w-full flex justify-center items-center text-6xl font-serif max-lg:text-4xl max-sm:text-2xl'>
             Submit the Form First
           </div>
           ) : (
-        <div className='h-[85%] w-full overflow-y-auto'>
+        <div className='h-[85%] w-full overflow-y-auto px-1.5'>
             {cmessages.map((message, index) =>(
-              <div key={index} className='flex flex-row gap-2 items-center py-1'>
+              <div key={index} className='flex flex-row gap-1 items-center py-1'>
                 <span className={`bg-black text-gray-100 rounded-full py-3 font-serif 
                 ${message.role === 'system' ? 'px-3.5':'px-3 bg-green-800'}`}>
                   {message.role == 'user'? 'Me': 'AI'}
                   </span>
 
-                <span className={`bg-gray-400 rounded-2xl  w-fit py-3 px-1.5 font-sans 
+                <span className={`bg-gray-400 rounded-2xl w-fit py-3 px-1.5 font-sans 
                 ${message.role === 'system' ? 'bg-green-500 text-white' : 'bg-white text-black'}`}>
                  {message.content}
                 </span>
@@ -127,7 +127,7 @@ function Chat({formData}) {
             <button 
             type='submit'
             onClick={startMessage}
-            className={` px-4 py-2.5 rounded-full  transition-all
+            className={` px-4 py-2.5 rounded-full  transition-all max-sm:text-sm max-md:px-2
                         ${started ? 'hidden' : 'block'} 
                         ${formData[0]===undefined ? 'cursor-not-allowed bg-gray-300 text-white' : 'animate-bounce bg-green-400 hover:bg-green-500 block'}`}
             disabled = {formData[0]===undefined ? true : false}
