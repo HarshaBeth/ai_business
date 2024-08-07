@@ -22,7 +22,8 @@ function Chat({formData}) {
               '\nContinuity: \n' +
               formData[3] +
               '\nBusiness Guildelines: \n' +
-              formData[4] 
+              formData[4] +
+              '\n. Give me the name of the Azure services between brackets.'
             );
     
     setStarted(true);

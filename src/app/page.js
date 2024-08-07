@@ -4,6 +4,7 @@ import Chart from "@/components/Chart";
 import Chat from "@/components/Chat";
 import Compiler from "@/components/Compiler";
 import Contact from "@/components/Contact";
+import CostCalculator from "@/components/CostCalculator";
 import Form from "@/components/Form";
 import Homepage from "@/components/Homepage";
 import { useState } from "react";
@@ -27,7 +28,8 @@ export default function Home() {
       <Chat formData={formData}/>
       {/* <Chart  nums={nums} numsUpdate={numsUpdate}/> */}
       <Compiler />
-      <AzureCalculator />
+      {/* <AzureCalculator /> */}
+      <CostCalculator />
       <Contact />
     </>
   );
