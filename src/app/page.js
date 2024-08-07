@@ -1,6 +1,4 @@
 'use client'
-import AzureCalculator from "@/components/AzureCalculator";
-import Chart from "@/components/Chart";
 import Chat from "@/components/Chat";
 import Compiler from "@/components/Compiler";
 import Contact from "@/components/Contact";
@@ -26,9 +24,7 @@ export default function Home() {
       <Homepage />
       <Form formData={formData} formDataChange={formDataChange} />
       <Chat formData={formData}/>
-      {/* <Chart  nums={nums} numsUpdate={numsUpdate}/> */}
       <Compiler />
-      {/* <AzureCalculator /> */}
       <CostCalculator />
       <Contact />
     </>

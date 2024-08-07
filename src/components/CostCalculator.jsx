@@ -48,8 +48,8 @@ const CostCalculator = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen gap-5">
-      <h1 className="text-4xl font-bold">Azure Cost <span className="text-green-500">Calculator</span></h1>
-      <form onSubmit={handleSubmit} className="border-2 border-black border-dotted p-10 px-20 rounded-xl">
+      <h1 className="text-4xl font-bold max-sm:text-3xl">Azure Cost <span className="text-green-500">Calculator</span></h1>
+      <form onSubmit={handleSubmit} className="border-2 border-black border-dotted p-10 px-20 max-md:px-5 rounded-xl">
         {services.map((service, index) => (
           <div key={index} className="flex flex-row gap-5 mb-2">
             <input
@@ -72,7 +72,7 @@ const CostCalculator = () => {
           <button type="submit" className="bg-gray-700 text-white px-9 py-2 rounded-lg hover:bg-gray-950">Calculate Cost</button>
         </div>
       </form>
-      {cost !== null && <h2 className="text-2xl font-semibold">Total Cost: ${cost.toFixed(2)} per hour</h2>}
+      {cost !== null && <h2 className="text-2xl max-sm:text-xl font-semibold">Total Cost: <span className="text-green-500 "> ${cost.toFixed(2)}</span> per hour</h2>}
     </div>
   );
 };
