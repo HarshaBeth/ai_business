@@ -8,7 +8,7 @@ function Navbar() {
         <Link href={'/'} className='font-serif text-3xl max-sm:text-2xl text-white'>Webology</Link>
       </span>
       
-      <span className='flex flex-row gap-5 max-md:gap-2 text-xl font-mono'>
+      <span className='flex flex-row gap-5 max-md:gap-2 text-xl max-sm:text-sm font-mono'>
         <Link href={'#Form'} className=' text-white hover:text-black hover:underline'>Form</Link>
         <span className='text-white'>|</span>
         <Link href={'#Contact'} className='text-white hover:text-black hover:underline'>Contact</Link>

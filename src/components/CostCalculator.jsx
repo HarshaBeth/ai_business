@@ -49,7 +49,7 @@ const CostCalculator = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen gap-5">
       <h1 className="text-4xl font-bold max-sm:text-3xl">Azure Cost <span className="text-green-500">Calculator</span></h1>
-      <form onSubmit={handleSubmit} className="border-2 border-black border-dotted p-10 px-20 max-md:px-5 rounded-xl">
+      <form onSubmit={handleSubmit} className="border-2 border-black border-dotted p-10 px-20 max-md:px-5 max-sm:px-2 max-sm:py-7 rounded-xl">
         {services.map((service, index) => (
           <div key={index} className="flex flex-row gap-5 mb-2">
             <input

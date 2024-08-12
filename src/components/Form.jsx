@@ -22,7 +22,7 @@ function Form({formData, formDataChange}) {
   return (
     <div className='h-screen w-full bg-gray-100 flex justify-center items-center' id='Form'>
         <form onSubmit={handleSubmit(onSubmit)} 
-            className='border-2 border-black w-fit h-fit py-12 px-16 max-md:px-8 max-sm:px-3 max-sm:py-8 rounded-lg font-mono flex flex-col max-sm:justify-center max-sm:items-center gap-5 bg-white'>
+            className='sm:border-2 sm:border-black w-fit h-fit py-12 px-16 max-md:px-8 max-sm:px-3 max-sm:py-8 rounded-lg font-mono flex flex-col max-sm:justify-center max-sm:items-center gap-5 bg-white'>
             {submitted && 
                 <span className=' flex justify-center items-center text-4xl font-sans'> Form Submitted...</span>
             }
