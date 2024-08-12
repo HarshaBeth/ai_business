@@ -40,7 +40,7 @@ function Form({formData, formDataChange}) {
                     labelPlacement='inside'
                     maxRows={3}
                     placeholder='Type here...'
-                    className='bg-gray-100 border-b-2 border-green-500 font-serif rounded-md max-sm:px-2'
+                    className='bg-gray-100 border-b-2 border-green-500 font-serif rounded-md max-sm:px-0.5'
                     id='objective'
                     {...register("objective")}
                 />

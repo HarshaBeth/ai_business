@@ -12,7 +12,7 @@ function Chat({formData}) {
  
 
   const startMessage = () => {
-    setInput('Generate an azure cloud architecture diagram using reactflow and react-az-icons ex. AzVirtualMachine, and name the file App.js,\n' +
+    setInput('Generate an azure cloud architecture diagram using reactflow and react-az-icons ex. AzVirtualMachine, and name the file App.js. Under the icon should be the azure service and it\'s sku\n' +
               'Business Objective: \n' + 
               formData[0] +
               '\nBusiness Capacity: \n' +
@@ -23,7 +23,7 @@ function Chat({formData}) {
               formData[3] +
               '\nBusiness Guildelines: \n' +
               formData[4] +
-              '\n. Give me the name of the Azure services between brackets.'
+              '\n\n Give me the name of the Azure services between brackets.'
             );
     
     setStarted(true);
@@ -44,7 +44,7 @@ function Chat({formData}) {
         {
           model: 'gpt-3.5-turbo',
           messages: itemsCopy,
-          max_tokens: 500,
+          max_tokens: 1400,
           temperature: 0.7
         },
         {
